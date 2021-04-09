@@ -86,8 +86,8 @@ public class PostLogger {
 			}
 			r1.close();  r2.close();
 			fr1.close(); fr2.close();
-			Files.move(Paths.get(tmpPath), Paths.get(filePath), StandardCopyOption.REPLACE_EXISTING);
-			return delete;
+            Path renamedPath = Files.move(Paths.get(tmpPath), Paths.get(filePath), StandardCopyOption.REPLACE_EXISTING);
+            return (delete && renamedPath.toString().equals(filePath));
     	} catch (IOException e) {
 			e.printStackTrace();
             return false;
