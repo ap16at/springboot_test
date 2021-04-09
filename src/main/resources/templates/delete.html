@@ -29,18 +29,18 @@
             </button>
         </div>
         <div class="layer1">
-          <p class="tab">
-            <th:block th:if="${deleteAttempted}">
-              <th:block th:if="${deleted}">
-                <th:block>The requested post has been deleted from history.</th:block>
-              </th:block>
-              <th:block th:unless="${deleted}">
-                <th:block>The requested post does not exist in the history.</th:block>
-              </th:block>
-            </th:block>
-          </p>
+            <p class="tab">
+                <th:block th:if="${deleteAttempted}">
+                    <th:block th:if="${deleted}">
+                        <th:block>The requested post has been deleted from history.</th:block>
+                    </th:block>
+                    <th:block th:unless="${deleted}">
+                        <th:block>The requested post does not exist in the history.</th:block>
+                    </th:block>
+                </th:block>
+            </p>
         </div>
-    </div>
+        </div>
     </form>
 </td>
 
